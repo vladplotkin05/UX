@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervácia - Zbojnícka Chata</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/components.css">
+
+</head>
+<body>
+<div class="site-contact-bar">
+    <div class="contact-bar-content">
+        <p>rezervacie@zbojnickachata.sk |  +421 903 638 000</p>
+    </div>
+</div>
+
+<div class="main-navigation">
+    <div class="navigation-content">
+        <div class="logo">
+            <a href="#"><img src="images/logo.jpg" alt="Zbojnícka Chata Logo"></a>
+        </div>
+        <nav class="main-menu">
+            <a href="#">Služby + Cenník</a>
+            <a href="#">Aktivity</a>
+            <a href="#">Chata</a>
+            <a href="#" class="nav-active">Kontakt + Rezervácie</a>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="header-split">
+        <div class="header-image">
+            <img src="images/zbojnicka.jpg" alt="Zbojnícka Chata in winter">
+        </div>
+        <div class="header-content">
+            <h2>Vitajte na Zbojníckej chate</h2>
+            <hr class="header-divider">
+            <p>Nachádza sa vo Veľkej Studenej doline, ktorá je vo Vysokých Tatrách výnimočná najväčším počtom plies (26) rôznych veľností a charakterів, a je bohatá na tatranskú faunu i flóru. Je tu nespočetné množstvo turistických, horolezeckých, skialpinistických a prírodovedeckých aktivít. Chata má strategické miesto aj pre tých, ktorí plánujú viac dňové prechody Vysokými Tatrami.</p>
+            <div class="header-meta">
+                <p><strong>Prevádzka:</strong> Celoročná</p>
+                <p><strong>Nadmorská výška:</strong> 1960 m</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <a href="#">Domov</a> / <a href="#">Služby</a> / Rezervácia ubytovania
+    </div>
+
+    <div class="steps">
+        <div class="step active" data-step="1">
+            <div class="step-circle">1</div>
+            <div class="step-label">Typ ubytovania</div>
+        </div>
+        <div class="step" data-step="2">
+            <div class="step-circle">2</div>
+            <div class="step-label">Termín a služby</div>
+        </div>
+        <div class="step" data-step="3">
+            <div class="step-circle">3</div>
+            <div class="step-label">Kontaktné údaje</div>
+        </div>
+        <div class="step" data-step="4">
+            <div class="step-circle">4</div>
+            <div class="step-label">Platba</div>
+        </div>
+        <div class="step" data-step="5">
+            <div class="step-circle">5</div>
+            <div class="step-label">Potvrdenie</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Step 1: Room Selection -->
+        <div class="form-section active" id="step1">
+            <h2 class="section-title">Vyberte typ ubytovania</h2>
+
+            <div class="room-grid">
+                <div class="room-card" onclick="selectRoom('standard')">
+                    <div class="room-image">
+                        <img src="images/header-premium.jpg" alt="Štandardná izba">
+                        <div class="room-badge">Štandard</div>
+                    </div>
+                    <div class="room-info">
+                        <h3 class="room-title">Viaclôžková izba</h3>
+                        <p class="room-description">Turistické ubytovanie v spoločnej izbe s inými hosťami. Ideálne pre individuálnych turistov.</p>
+                        <div class="room-features">
+                            <span class="feature-tag">👥 4-8 osôb</span>
+                            <span class="feature-tag">🛏️ Vankúš + prikrývka</span>
+                            <span class="feature-tag">🚿 Umyváreň</span>
+                        </div>
+                        <div class="room-price">25 € <span>/ osoba / noc</span></div>
+                        <a href="#" class="view-gallery" onclick="openGallery('standard'); event.stopPropagation();">Zobraziť fotografie →</a>
+                    </div>
+                </div>
+
+                <div class="room-card" onclick="selectRoom('premium')">
+                    <div class="room-image">
+                        <img src="images/header-standard.jpg" alt="Premium izba">
+                        <div class="room-badge">Premium</div>
+                    </div>
+                    <div class="room-info">
+                        <h3 class="room-title">Menšia izba</h3>
+                        <p class="room-description">Pohodlnejšie ubytovanie v menšej izbe. Vhodné pre dvojice a malé skupiny.</p>
+                        <div class="room-features">
+                            <span class="feature-tag">👥 2-4 osoby</span>
+                            <span class="feature-tag">🛏️ Vankúš + prikrývka</span>
+                            <span class="feature-tag">🚿 Umyváreň</span>
+                            <span class="feature-tag">🪟 Výhľad</span>
+                        </div>
+                        <div class="room-price">35 € <span>/ osoba / noc</span></div>
+                        <a href="#" class="view-gallery" onclick="openGallery('premium'); event.stopPropagation();">Zobraziť fotografie →</a>
+                    </div>
+                </div>
+
+                <div class="room-card" onclick="selectRoom('emergency')">
+                    <div class="room-image">
+                        <img src="images/header-emergency.jpg" alt="Emergency izba">
+                        <div class="room-badge">Núdzové</div>
+                    </div>
+                    <div class="room-info">
+                        <h3 class="room-title">Núdzové prespanie</h3>
+                        <p class="room-description">Prespanie na podlahe v jedálni s vlastným spacákom. Len pri plnej obsadenosti lôžok.</p>
+                        <div class="room-features">
+                            <span class="feature-tag">💤 Vlastný spacák</span>
+                            <span class="feature-tag">🧘 Karimatka potrebná</span>
+                            <span class="feature-tag">❌ Bez zliav</span>
+                        </div>
+                        <div class="room-price">12 € <span>/ osoba / noc</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                ℹ️ Súčasťou lôžka je vankúš a prikrývka bez posteľného prádla. Z hygienických dôvodov je potrebné mať vlastnú vložku do spacáku alebo si za príplatok objednať posteľné prádlo.
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-primary" onclick="nextStep()">Pokračovať →</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Dates and Services -->
+        <div class="form-section" id="step2">
+            <h2 class="section-title">Termín a doplnkové služby</h2>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="checkin">Dátum príchodu *</label>
+                    <input type="date" id="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout">Dátum odchodu *</label>
+                    <input type="date" id="checkout" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Počet dospelých *</label>
+                <div class="counter">
+                    <button type="button" class="counter-btn" onclick="changeCounter('adults', -1)">−</button>
+                    <span class="counter-value" id="adults">2</span>
+                    <button type="button" class="counter-btn" onclick="changeCounter('adults', 1)">+</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Počet detí (do 12 rokov)</label>
+                <div class="counter">
+                    <button type="button" class="counter-btn" onclick="changeCounter('children', -1)">−</button>
+                    <span class="counter-value" id="children">0</span>
+                    <button type="button" class="counter-btn" onclick="changeCounter('children', 1)">+</button>
+                </div>
+            </div>
+
+            <div class="form-group" id="childrenAgesGroup" style="display: none;">
+                <label>Vek detí</label>
+                <input type="text" id="childrenAges" placeholder="Napr.: 8, 10">
+            </div>
+
+            <div class="form-group">
+                <label>Stravovanie</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="dinner" onchange="updateSummary()">
+                        <label for="dinner" class="checkbox-label">
+                            Večera <span class="price-tag">15 €/osoba/noc</span>
+                        </label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="breakfast" onchange="updateSummary()">
+                        <label for="breakfast" class="checkbox-label">
+                            Raňajky <span class="price-tag">12 €/osoba/noc</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Doplnkové služby</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="bedding" onchange="updateSummary()">
+                        <label for="bedding" class="checkbox-label">
+                            Posteľné prádlo <span class="price-tag">12 €/osoba</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="allergies">Alergie a intolerancie</label>
+                <textarea id="allergies" placeholder="Uveďte prosím všetky alergie a potravinové intolerancie..."></textarea>
+            </div>
+
+            <div class="alert alert-warning">
+                ⚠️ Rezervované miesta držíme do 17:00 v deň príchodu. Izby je potrebné opustiť najneskôr do 8:00.
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-secondary" onclick="prevStep()">← Späť</button>
+                <button class="btn btn-primary" onclick="nextStep()">Pokračovať →</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Contact Info -->
+        <div class="form-section" id="step3">
+            <h2 class="section-title">Kontaktné údaje</h2>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">Meno *</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Priezvisko *</label>
+                    <input type="text" id="lastName" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefónne číslo *</label>
+                <input type="tel" id="phone" placeholder="+421 XXX XXX XXX" required>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Poznámky a špeciálne požiadavky</label>
+                <textarea id="notes" placeholder="Máte nejaké špeciálne požiadavky alebo otázky?"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-secondary" onclick="prevStep()">← Späť</button>
+                <button class="btn btn-primary" onclick="nextStep()">Pokračovať →</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Payment Method -->
+        <div class="form-section" id="step4">
+            <h2 class="section-title">Spôsob platby</h2>
+
+            <div class="summary" id="summaryBoxPayment">
+                <!-- Summary will be generated by JS -->
+            </div>
+
+            <div class="form-group">
+                <label>Vyberte spôsob platby *</label>
+                <div class="payment-options">
+                    <div class="payment-card" onclick="selectPayment('bank')">
+                        <input type="radio" name="payment" class="payment-radio" id="payment-bank" value="bank">
+                        <div class="payment-info">
+                            <div class="payment-title">💳 Bankový prevod</div>
+                            <div class="payment-desc">Zaplaťte bankovým prevodom pred príchodom. Detaily uhradenia dostanete emailom.</div>
+                        </div>
+                    </div>
+
+                    <div class="payment-card" onclick="selectPayment('cash')">
+                        <input type="radio" name="payment" class="payment-radio" id="payment-cash" value="cash">
+                        <div class="payment-info">
+                            <div class="payment-title">💵 Platba na mieste</div>
+                            <div class="payment-desc">Zaplaťte v hotovosti alebo kartou priamo na chate pri príchode.</div>
+                        </div>
+                    </div>
+
+                    <div class="payment-card" onclick="selectPayment('online')">
+                        <input type="radio" name="payment" class="payment-radio" id="payment-online" value="online">
+                        <div class="payment-info">
+                            <div class="payment-title">🌐 Online platba</div>
+                            <div class="payment-desc">Zabezpečená online platba kartou. Okamžité potvrdenie rezervácie.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                ℹ️ Pri bankovom prevode je potrebné uhradiť rezerváciu minimálne 3 dni pred príchodom. Pri zrušení rezervácie platia storno podmienky podľa cenníka.
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-secondary" onclick="prevStep()">← Späť</button>
+                <button class="btn btn-primary" onclick="nextStep()">Pokračovať →</button>
+            </div>
+        </div>
+
+        <!-- Step 5: Confirmation -->
+        <div class="form-section" id="step5">
+            <h2 class="section-title">Potvrdenie rezervácie</h2>
+
+            <div class="summary" id="summaryBoxFinal">
+                <!-- Summary will be generated by JS -->
+            </div>
+
+            <div class="alert alert-info">
+                ℹ️ Po odoslaní rezervácie Vám príde potvrdzujúci e-mail do 24 hodín. Prosím skontrolujte si všetky údaje pred odoslaním.
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-secondary" onclick="prevStep()">← Späť</button>
+                <button class="btn btn-primary" onclick="submitReservation()">Odoslať rezerváciu ✓</button>
+            </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div class="form-section" id="success">
+            <div class="success-screen">
+                <div class="success-icon">✓</div>
+                <h2>Rezervácia úspešne odoslaná!</h2>
+                <p>Ďakujeme za Vašu rezerváciu v Zbojníckej chate.</p>
+                <p>Potvrdzujúci e-mail s ďalšími informáciami Vám príde do <span class="highlight">24 hodín</span>.</p>
+                <p style="margin-top: 20px;">Číslo rezervácie: <span class="highlight">#ZCH-2024-' + Math.floor(Math.random() * 10000) + '</span></p>
+                <p style="margin-top: 30px; color: #2c5530; font-size: 1.2em; font-weight: 600;">Tešíme sa na Vašu návštevu! 🏔️</p>
+                <button class="btn btn-primary" onclick="resetForm()" style="margin-top: 40px; max-width: 300px;">Nová rezervácia</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="galleryModal">
+    <div class="modal-close" onclick="closeGallery()">×</div>
+    <div class="modal-content">
+        <div class="gallery-grid" id="galleryContent"></div>
+    </div>
+</div>
+
+<footer>
+    <p><strong>Zbojnícka Chata</strong> | 1960 m n.m. | Veľká Studená dolina</p>
+    <p> rezervacie@zbojnickachata.sk |  +421 903 638 000</p>
+    <p style="margin-top: 20px; font-size: 0.9em;">© 2024 Zbojnícka Chata. Všetky práva vyhradené.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

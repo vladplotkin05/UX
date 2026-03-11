@@ -1,0 +1,494 @@
+.room-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.room-card.selected {
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.room-image {
+    width: 100%;
+    height: 200px;
+    background: #ddd;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #d4af37;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.room-info {
+    padding: 20px;
+}
+
+.room-title {
+    font-size: 1.3em;
+    color: #004853;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.room-description {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.room-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.feature-tag {
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #555;
+}
+
+.room-price {
+    font-size: 1.5em;
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.room-price span {
+    font-size: 0.6em;
+    color: #999;
+    font-weight: normal;
+}
+
+.view-gallery {
+    display: inline-block;
+    color: #004853;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 10px;
+    border-bottom: 1px solid #004853;
+}
+
+.view-gallery:hover {
+    color: #d4af37;
+    border-color: #d4af37;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #004853;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: all 0.3s;
+    font-family: inherit;
+    background: white;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.checkbox-item:hover {
+    background: #fff;
+    border-color: #d4af37;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 15px;
+    cursor: pointer;
+    accent-color: #d4af37;
+}
+
+.checkbox-label {
+    flex: 1;
+    cursor: pointer;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.counter-btn {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #d4af37;
+    background: white;
+    color: #d4af37;
+    border-radius: 4px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.counter-btn:hover {
+    background: #d4af37;
+    color: white;
+}
+
+.counter-value {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #004853;
+    min-width: 50px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.btn {
+    flex: 1;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: #d4af37;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #c49d2e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+    background: #004853;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #004853;
+}
+
+.summary {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 2px solid #e0e0e0;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #d4af37;
+    padding-top: 20px;
+    margin-top: 10px;
+    border-top: 2px solid #d4af37;
+}
+
+.alert {
+    padding: 18px 20px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    border-left: 4px solid;
+}
+
+.alert-info {
+    background: #e8f4f8;
+    color: #0c5460;
+    border-color: #17a2b8;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border-color: #ffc107;
+}
+
+.payment-options {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.payment-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.payment-card:hover {
+    border-color: #d4af37;
+    background: #fefef8;
+}
+
+.payment-card.selected {
+    border-color: #d4af37;
+    background: #fefef8;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.payment-radio {
+    width: 24px;
+    height: 24px;
+    accent-color: #d4af37;
+}
+
+.payment-info {
+    flex: 1;
+}
+
+.payment-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.payment-desc {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.success-screen {
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.success-icon {
+    font-size: 5em;
+    color: #004853;
+    margin-bottom: 20px;
+}
+
+.success-screen h2 {
+    font-size: 2.2em;
+    color:#004853;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.success-screen p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.success-screen .highlight {
+    color: #d4af37;
+    font-weight: 600;
+}
+
+.price-tag {
+    display: inline-block;
+    background: #004853;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 30px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 250px;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background: #004853;
+    color: white;
+    padding: 40px 30px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background: #fff;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    footer {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+}
