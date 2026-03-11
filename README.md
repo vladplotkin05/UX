@@ -1,4 +1,4 @@
-UX/ 3 odovzdavka
+
 
 Figma Prototype - https://www.figma.com/design/4D6A02JdbsJXRzSTkqGUmG/UX-Plotkin-Vladyslav-----Prototype?node-id=33525-578&p=f&t=9i3PjZ1fvWBLZjEj-0&fuid=1553663292822322554
 
